@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veri Tablosu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="searchInput" placeholder="Ara...">
+        <div id="columnToggle">
+            <label><input type="checkbox" data-column="0" checked> Başlık</label>
+            <label><input type="checkbox" data-column="1" checked> Tarih</label>
+            <label><input type="checkbox" data-column="2" checked> Fiyat</label>
+        </div>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Başlık</th>
+                    <th>Tarih</th>
+                    <th>Fiyat</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="buttonContainer">
+            <button id="exportExcel">Excel'e Aktar</button>
+            <button id="exportPDF">PDF'ye Aktar</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
